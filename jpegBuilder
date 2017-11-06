@@ -1,0 +1,12 @@
+#/bin/
+
+
+for i in *008*
+
+do
+
+ djpeg  -scale 1/8 -bmp $i  |  cjpeg > /byrnj233/Documents/small.$i #dumps output in documents folder
+
+
+
+done
