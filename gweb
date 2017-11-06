@@ -1,0 +1,14 @@
+
+# when testing, comment/uncomment the following line
+# comment - output goes to screen
+# uncomment - output goes to file
+
+
+#	exec > $HOME/Documents/output.html           
+
+
+cd /users/tutors/mhtest15/share/shakespeare 
+
+echo '<pre>'
+grep -i "$1" */*html | sed -e 's|<|\&lt;|g' | sed -e 's|>|\&gt;|g' | clickable 
+echo '</pre>' 
