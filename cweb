@@ -1,0 +1,14 @@
+# Read in the arguments:
+
+OLDSTRING=$1
+NEWSTRING=$2
+
+cd $HOME/shakespeare/macbeth
+
+for file in *html
+do
+ cat $file | sed -e "s|$OLDSTRING|$NEWSTRING|g" > tmpfile 
+ sed -i "s|$OLDSTRING|$NEWSTRING|g" *html
+done 
+ 
+
